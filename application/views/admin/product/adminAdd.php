@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Easybucket - Update</title>
+		<title>Easybucket - Admin Add</title>
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -68,7 +68,9 @@
 							</div>
 
 							<div class="form-group">
-								<h4>IMAGE : </h4><input type="file" name="image" placeholder="image">
+								<h4>Image: </h4>
+								<img src="/electro/img/1.png" alt="">
+								<input class="input" type="file" name="image" placeholder="image">
 							</div>
 							<br>
 							<div class="form-group">
@@ -98,12 +100,11 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
-
-		<!-- jQuery Plugins -->
 		<script>
-			var element = document.getElementById("listUpdate");
+			var element = document.getElementById("listAdd");
 			element.classList.add("active");
 		</script>
+		<!-- jQuery Plugins -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/slick.min.js"></script>
@@ -113,4 +114,3 @@
 
 	</body>
 </html>
-	

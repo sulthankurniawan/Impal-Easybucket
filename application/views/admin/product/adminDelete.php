@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Easybucket - Delete</title>
+		<title>Easybucket - </title>
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -45,7 +45,7 @@
             <!-- row -->
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="breadcrumb-header">Delete Item</h3>
+                    <h3 class="breadcrumb-header">List Item</h3>
                 </div>
             </div>
             <!-- /row -->
@@ -64,7 +64,7 @@
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="./img/product01.png" alt="">
+                                <img src="assets/product01.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -81,7 +81,7 @@
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="./img/product02.png" alt="">
+                                <img src="assets/product02.png" alt="">
                                 
                             </div>
                             <div class="product-body">
@@ -99,7 +99,7 @@
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="./img/product03.png" alt="">
+                                <img src="assets/product03.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -116,7 +116,7 @@
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="./img/product04.png" alt="">
+                                <img src="assets/product04.png" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
