@@ -1,6 +1,6 @@
 <?php
 
-class Login_admin extends CI_Controller {
+class Admin_Order extends CI_Controller {
     public function __construct()
     {
 		parent::__construct();
@@ -9,6 +9,7 @@ class Login_admin extends CI_Controller {
 	public function index()
 	{
         // load view admin/overview.php
-        $this->load->view("admin/login");
+        $this->load->view("easybucket_test/navAdmin");
+        $this->load->view("admin/adminOrder");
 	}
 }
