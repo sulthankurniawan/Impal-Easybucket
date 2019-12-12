@@ -100,7 +100,10 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
-
+		<script>
+			var element = document.getElementById("listAdd");
+			element.classList.add("active");
+		</script>
 		<!-- jQuery Plugins -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>

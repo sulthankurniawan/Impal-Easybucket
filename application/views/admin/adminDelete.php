@@ -137,7 +137,10 @@
         </div>
     </div>
     <!-- Products tab & slick -->
-
+    <script>
+			var element = document.getElementById("listDelete");
+			element.classList.add("active");
+	</script>
     
 	
     <!-- jQuery Plugins -->
