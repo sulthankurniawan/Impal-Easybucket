@@ -13,7 +13,7 @@ class Products extends CI_Controller
 
     public function index()
     {
-        $data["products"] = $this->product_model->getAll();
+        $data["products"] = $this->db->query("SELECT * FROM product");
         $this->load->view("easybucket_test/navAdmin");
         $this->load->view("admin/product/adminDelete", $data);
     }

@@ -53,161 +53,65 @@
         <!-- /container -->
     </div>
     <!-- /BREADCRUMB -->
-        
+    <?php $queryN = $this->db->query("SELECT * FROM product"); ?>
+    <?php $rowNum = 0;?>
     <!-- Products tab & slick -->
     <div class="col-md-12">
         <div class="row">
             <div class="products-tabs">
+                <?php for($i=1;$i<=intdiv($queryN->num_rows(),4)+1;$i++){ ?>
                 <!-- tab -->
                 <div id="tab1" class="tab-pane active">
                     <div class="products-slick" data-nav="#slick-nav-1" style="margin-bottom:5rem;">
+                        <?php if($i==intdiv($queryN->num_rows(),4)+1){ ?>
+                        <?php for($j=1;$j<=$queryN->num_rows()%4;$j++){ ?>
+                        <?php $row = $queryN->row($rowNum); ?>
+                        <?php $rowNum = $rowNum + 1; ?>
+                        <!-- product -->
+                        <div class="product">
+                            <div class="product-img">
+                                <img src="<?php echo base_url('assets/product02.png') ?>" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category"><?php echo $row->category_id;?></p>
+                                <h3 class="product-name"><a href="#"><?php echo $row->nama;?></a></h3>
+                                <h4 class="product-price"><?php echo $row->harga;?></h4>
+                                <h3 class="product-name"><a href="#"><?php echo $row->description;?></a></h3>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
+                            </div>
+                        </div>
+                        <!-- /product -->
+                        <?php } ?>
+                        <?php } else {?>
+                        <?php for($j=1;$j<=4;$j++){ ?>
+                            <?php $row = $queryN->row($rowNum); ?>
+                            <?php $rowNum = $rowNum + 1; ?>
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
                                 <img src="<?php echo base_url('assets/product01.png') ?>" alt="">
                             </div>
                             <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00</h4>
-                                <h3 class="product-name"><a href="#">Description</a></h3>
+                                <p class="product-category"><?php echo $row->category_id;?></p>
+                                <h3 class="product-name"><a href="#"><?php echo $row->nama;?></a></h3>
+                                <h4 class="product-price"><?php echo $row->harga;?></h4>
+                                <h3 class="product-name"><a href="#"><?php echo $row->description;?></a></h3>
                             </div>
                             <div class="add-to-cart">
                                 <button class="add-to-cart-btn"><i class=""></i>Delete</button>
                             </div>
                         </div>
                         <!-- /product -->
-
-                        <!-- product -->
-                        <div class="product">
-                            <div class="product-img">
-                                <img src="<?php echo base_url('assets/product02.png') ?>" alt="">
-                                
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00</h4>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                            </div>
-                            <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
-                            </div>
-                        </div>
-                        <!-- /product -->
-
-                        <!-- product -->
-                        <div class="product">
-                            <div class="product-img">
-                                <img src="<?php echo base_url('assets/product03.png') ?>" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00</h4>
-                                <h3 class="product-name"><a href="#">Description</a></h3>                              
-                            </div>
-                            <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
-                            </div>
-                        </div>
-                        <!-- /product -->
-
-                        <!-- product -->
-                        <div class="product">
-                            <div class="product-img">
-                                <img src="<?php echo base_url('assets/product04.png')?>" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00</h4>   
-                                <h3 class="product-name"><a href="#">Description</a></h3>  
-                            </div>
-                            <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
-                            </div>
-                        </div>
-                        <!-- /product -->
-                    </div>
-                    <div class="products-slick" data-nav="#slick-nav-1">
-
-                        <!-- product -->
-                        <div class="product">
-                            <div class="product-img">
-                                <img src="<?php echo base_url('assets/product01.png') ?>" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00</h4>
-                                <h3 class="product-name"><a href="#">Description</a></h3>
-                            </div>
-                            <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
-                            </div>
-                        </div>
-                        <!-- /product -->
-
-                        <!-- product -->
-                        <div class="product">
-                            <div class="product-img">
-                                <img src="<?php echo base_url('assets/product02.png') ?>" alt="">
-                                
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00</h4>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                            </div>
-                            <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
-                            </div>
-                        </div>
-                        <!-- /product -->
-
-                        <!-- product -->
-                        <div class="product">
-                            <div class="product-img">
-                                <img src="<?php echo base_url('assets/product03.png') ?>" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00</h4>
-                                <h3 class="product-name"><a href="#">Description</a></h3>                              
-                            </div>
-                            <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
-                            </div>
-                        </div>
-                        <!-- /product -->
-
-                        <!-- product -->
-                        <div class="product">
-                            <div class="product-img">
-                                <img src="<?php echo base_url('assets/product04.png')?>" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00</h4>   
-                                <h3 class="product-name"><a href="#">Description</a></h3>  
-                            </div>
-                            <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
-                            </div>
-                        </div>
-                        <!-- /product -->
+                        <?php } ?>
+                        <?php } ?>
                     </div>
                     <div id="slick-nav-1" class="products-slick-nav"></div>
                 </div>
                 <!-- /tab -->
-            </div>
-        </div>
-    </div>
-    <!-- Products tab & slick -->
+                <?php } ?>
+                
     <script>
 			var element = document.getElementById("listDelete");
 			element.classList.add("active");
