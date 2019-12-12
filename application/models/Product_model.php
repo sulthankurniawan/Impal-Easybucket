@@ -5,7 +5,7 @@ class Product_model extends CI_Model
     private $_table = "product";
 
     public $product_id;
-    public $name;
+    public $nama;
     public $price;
     public $category_id;
     public $image = "default.jpg";
@@ -14,8 +14,8 @@ class Product_model extends CI_Model
     public function rules()
     {
         return [
-            ['field' => 'name',
-            'label' => 'Name',
+            ['field' => 'nama',
+            'label' => 'Nama',
             'rules' => 'required'],
 
             ['field' => 'price',
@@ -45,10 +45,10 @@ class Product_model extends CI_Model
     public function save()
     {
         $post = $this->input->post();
-        $this->name = $post["name"];
+        $this->nama = $post["nama"];
         $this->price = $post["price"];
         $this->description = $post["description"];
-        $this->category_id = $post["category"];
+        $this->category_id = $post["category_id"];
         $this->db->insert($this->_table, $this);
     }
 
@@ -56,10 +56,10 @@ class Product_model extends CI_Model
     {
         $post = $this->input->post();
         $this->product_id = $post["id"];
-        $this->name = $post["name"];
+        $this->nama = $post["nama"];
         $this->price = $post["price"];
         $this->description = $post["description"];
-        $this->category_id = $post["category"];
+        $this->category_id = $post["categoryPid"];
         $this->db->update($this->_table, $this, array('product_id' => $post['id']));
     }
 
