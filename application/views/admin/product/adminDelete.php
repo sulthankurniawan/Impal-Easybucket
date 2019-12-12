@@ -60,11 +60,11 @@
             <div class="products-tabs">
                 <!-- tab -->
                 <div id="tab1" class="tab-pane active">
-                    <div class="products-slick" data-nav="#slick-nav-1">
+                    <div class="products-slick" data-nav="#slick-nav-1" style="margin-bottom:5rem;">
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="assets/product01.png" alt="">
+                                <img src="<?php echo base_url('assets/product01.png') ?>" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -81,7 +81,7 @@
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="assets/product02.png" alt="">
+                                <img src="<?php echo base_url('assets/product02.png') ?>" alt="">
                                 
                             </div>
                             <div class="product-body">
@@ -99,7 +99,7 @@
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="assets/product03.png" alt="">
+                                <img src="<?php echo base_url('assets/product03.png') ?>" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -116,7 +116,78 @@
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="assets/product04.png" alt="">
+                                <img src="<?php echo base_url('assets/product04.png')?>" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                <h4 class="product-price">$980.00</h4>   
+                                <h3 class="product-name"><a href="#">Description</a></h3>  
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
+                            </div>
+                        </div>
+                        <!-- /product -->
+                    </div>
+                    <div class="products-slick" data-nav="#slick-nav-1">
+
+                        <!-- product -->
+                        <div class="product">
+                            <div class="product-img">
+                                <img src="<?php echo base_url('assets/product01.png') ?>" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                <h4 class="product-price">$980.00</h4>
+                                <h3 class="product-name"><a href="#">Description</a></h3>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
+                            </div>
+                        </div>
+                        <!-- /product -->
+
+                        <!-- product -->
+                        <div class="product">
+                            <div class="product-img">
+                                <img src="<?php echo base_url('assets/product02.png') ?>" alt="">
+                                
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                <h4 class="product-price">$980.00</h4>
+                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
+                            </div>
+                        </div>
+                        <!-- /product -->
+
+                        <!-- product -->
+                        <div class="product">
+                            <div class="product-img">
+                                <img src="<?php echo base_url('assets/product03.png') ?>" alt="">
+                            </div>
+                            <div class="product-body">
+                                <p class="product-category">Category</p>
+                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                <h4 class="product-price">$980.00</h4>
+                                <h3 class="product-name"><a href="#">Description</a></h3>                              
+                            </div>
+                            <div class="add-to-cart">
+                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
+                            </div>
+                        </div>
+                        <!-- /product -->
+
+                        <!-- product -->
+                        <div class="product">
+                            <div class="product-img">
+                                <img src="<?php echo base_url('assets/product04.png')?>" alt="">
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Category</p>
@@ -144,12 +215,12 @@
     
 	
     <!-- jQuery Plugins -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/slick.min.js"></script>
-		<script src="js/nouislider.min.js"></script>
-		<script src="js/jquery.zoom.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="<?php echo base_url('js/jquery.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/bootstrap.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/slick.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/nouislider.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/jquery.zoom.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/main.js') ?>"></script>
 
 
     </body>
