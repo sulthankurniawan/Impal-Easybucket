@@ -9,23 +9,24 @@
 		<title>Easubucket - Nav Admin</title>
 
 		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
-		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+        <!-- Bootstrap -->
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css') ?>"/>
 
-		<!-- Slick -->
-		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
-		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+        <!-- Slick -->
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('css/slick.css') ?>"/>
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('css/slick-theme.css') ?>"/>
 
-		<!-- nouislider -->
-		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+        <!-- nouislider -->
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('css/nouislider.min.css') ?>"/>
 
-		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" href="<?php echo base_url('css/font-awesome.min.css') ?>">
 
-		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <!-- Custom stlylesheet -->
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('css/style.css') ?>"/>
+
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +48,7 @@
                 <div class="col-md-3">
                     <div class="header-logo">
                         <img src="./img/logo.png" alt="">
-                        <h3 class="breadcrumb-header">Admin Mode</h3>
+                        <h3 class="breadcrumb-header" style="color:#DCDCDC">Admin Mode</h3>
                     </div>							
                 </div>
                 <!-- /LOGO -->
@@ -66,13 +67,13 @@
             <div id="responsive-nav">
                 <!-- NAV -->
                 <ul class="main-nav nav navbar-nav">
-                    <li class="active"><a href="#">Customer's order</a></li>
+                    <li id="listOrder" class=""><a href="#">Customer's order</a></li>
                     <!-- <li><a href="#">Hot Deals</a></li> -->
+                    <li id="listOrder"><br></li>
                     <li><br></li>
-                    <li><br></li>
-                    <li><a href="#">Add Item</a></li>
-                    <li><a href="#">Update Item</a></li>
-                    <li><a href="#">Delete Item</a></li>
+                    <li id="listAdd" class=""><a href="#">Add Item</a></li>
+                    <li id="listUpdate" class=""><a href="#">Update Item</a></li>
+                    <li id="listDelete" class=""><a href="#">Delete Item</a></li>
                     <!-- <li><a href="#">Cameras</a></li> -->
                     <!-- <li><a href="#">Accessories</a></li> -->
                 </ul>
