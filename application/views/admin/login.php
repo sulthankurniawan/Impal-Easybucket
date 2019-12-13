@@ -83,13 +83,15 @@
 					<div class="col-md-7">
 						<!-- Billing Details -->
 						<div class="billing-details">
+						<form action="<?= site_url('admin/login') ?>" method="POST">
 							<div class="section-title">
 								<h4 class="title">Admin Password</h4>
 							</div>
 							<div class="form-group">
-								<input class="input" type="password" name="first-name" placeholder="Password">
+								<input class="input" type="password" name="password" placeholder="Password">
 							</div>
-							<a href="#" class="primary-btn order-submit">Login</a>
+							<input type="submit" value="Login" href="#" class="primary-btn order-submit">
+		 				</form>
 						</div>
 						<!-- /Billing Details -->
                     </div>     
