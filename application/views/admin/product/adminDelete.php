@@ -37,7 +37,11 @@
 
     </head>
 	<body>
-
+    <?php if ($this->session->flashdata('success')): ?>
+				<div class="alert alert-success" role="alert">
+					<?php echo $this->session->flashdata('success'); ?>
+				</div>
+				<?php endif; ?>
 	<!-- BREADCRUMB -->
 	<div id="breadcrumb" class="section">
         <!-- container -->
@@ -70,16 +74,21 @@
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="<?php echo base_url('assets/product02.png') ?>" alt="">
+                                <img src="<?php echo base_url('assets/default.png') ?>" alt="">
                             </div>
                             <div class="product-body">
-                                <p class="product-category"><?php echo $row->category_id;?></p>
+                                <?php
+                                    $queryCatI = $this->db->query("SELECT * FROM categories WHERE category_id=$row->category_id");
+                                    $rowCatE = $queryCatI->row();
+                                ?>
+                                <p class="product-category"><?php echo $rowCatE->category;?></p>
                                 <h3 class="product-name"><a href="#"><?php echo $row->nama;?></a></h3>
-                                <h4 class="product-price"><?php echo $row->harga;?></h4>
+                                <h4 class="product-price">Rp.<?php echo $row->harga;?></h4>
                                 <h3 class="product-name"><a href="#"><?php echo $row->description;?></a></h3>
                             </div>
                             <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
+                                <a href="<?php echo site_url('admin/products/edit/'.$row->product_id) ?>"><button class="add-to-cart-btn"><i class=""></i>Edit</button></a>
+                                <button onclick="deleteConfirm('<?php echo site_url('admin/products/delete/'.$row->product_id) ?>')" class="add-to-cart-btn"><i class=""></i>Delete</button>
                             </div>
                         </div>
                         <!-- /product -->
@@ -91,16 +100,21 @@
                         <!-- product -->
                         <div class="product">
                             <div class="product-img">
-                                <img src="<?php echo base_url('assets/product01.png') ?>" alt="">
+                                <img src="<?php echo base_url('assets/default.png') ?>" alt="">
                             </div>
                             <div class="product-body">
-                                <p class="product-category"><?php echo $row->category_id;?></p>
+                                <?php
+                                    $queryCatI = $this->db->query("SELECT * FROM categories WHERE category_id=$row->category_id");
+                                    $rowCatE = $queryCatI->row();
+                                ?>
+                                <p class="product-category"><?php echo $rowCatE->category;?></p>
                                 <h3 class="product-name"><a href="#"><?php echo $row->nama;?></a></h3>
-                                <h4 class="product-price"><?php echo $row->harga;?></h4>
+                                <h4 class="product-price">Rp.<?php echo $row->harga;?></h4>
                                 <h3 class="product-name"><a href="#"><?php echo $row->description;?></a></h3>
                             </div>
                             <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class=""></i>Delete</button>
+                                <a href="<?php echo site_url('admin/products/edit/'.$row->product_id) ?>"><button class="add-to-cart-btn"><i class=""></i>Edit</button></a>
+                                <button onclick="deleteConfirm('<?php echo site_url('admin/products/delete/'.$row->product_id) ?>')" class="add-to-cart-btn"><i class=""></i>Delete</button>
                             </div>
                         </div>
                         <!-- /product -->
@@ -117,7 +131,12 @@
 			element.classList.add("active");
 	</script>
     
-	
+	<script>
+    function deleteConfirm(url){
+        $('#btn-delete').attr('href', url);
+        $('#deleteModal').modal();
+    }
+    </script>
     <!-- jQuery Plugins -->
 		<script src="<?php echo base_url('js/jquery.min.js') ?>"></script>
 		<script src="<?php echo base_url('js/bootstrap.min.js') ?>"></script>

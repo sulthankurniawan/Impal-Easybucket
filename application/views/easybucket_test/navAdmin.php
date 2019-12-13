@@ -67,13 +67,13 @@
             <div id="responsive-nav">
                 <!-- NAV -->
                 <ul class="main-nav nav navbar-nav">
-                    <li id="listOrder" class=""><a href="#">Customer's order</a></li>
+                    <li id="listOrder" class=""><a href="<?php echo site_url('admin/admin_order') ?>">Customer's order</a></li>
                     <!-- <li><a href="#">Hot Deals</a></li> -->
                     <li id="listOrder"><br></li>
                     <li><br></li>
-                    <li id="listAdd" class=""><a href="#">Add Item</a></li>
+                    <li id="listAdd" class=""><a href="<?php echo site_url('admin/products/add') ?>">Add Item</a></li>
                     <li id="listUpdate" class=""><a href="#">Update Item</a></li>
-                    <li id="listDelete" class=""><a href="#">List Item</a></li>
+                    <li id="listDelete" class=""><a href="<?php echo site_url('admin/products/') ?>">List Item</a></li>
                     <!-- <li><a href="#">Cameras</a></li> -->
                     <!-- <li><a href="#">Accessories</a></li> -->
                 </ul>

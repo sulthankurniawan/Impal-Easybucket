@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Electro - HTML Ecommerce Template</title>
+		<title>Easybucket - Admin Add</title>
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -59,35 +59,58 @@
 			<div class="container">
 				<!-- row -->
 				<div class="row">
-
+				<?php if ($this->session->flashdata('success')): ?>
+				<div class="alert alert-success" role="alert">
+					<?php echo $this->session->flashdata('success'); ?>
+				</div>
+				<?php endif; ?>
 					<div class="col-md-7">
 						<!-- Billing Details -->
+						<form action="<?php echo site_url('admin/products/edit') ?>" method="post" enctype="multipart/form-data">
 						<div class="billing-details">
+							<input type="hidden" name="id" value="<?php echo $product->product_id?>" />
 							<div class="section-title">
 								<h3 class="title">Item Profile</h3>
 							</div>
 
 							<div class="form-group">
-								<h4>IMAGE : </h4><input type="file" name="image" placeholder="image">
+								<h4>Image: </h4>
+								<img src="/electro/img/1.png" alt="">
+								<input class="input" type="file" name="image" placeholder="image">
 							</div>
 							<br>
 							<div class="form-group">
-								<input class="input" type="text" name="first-name" placeholder="Name">
+								<label for="nama">Nama</label>
+								<input value="<?php echo $product->nama ?>" class="input form-control <?php echo form_error('nama') ? 'is-invalid':'' ?>" type="text" name="nama" placeholder="Name">
 							</div>
 							<div class="form-group">
-								<input class="input" type="email" name="email" placeholder="Category">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="categories">Categories</label>
+								</div>
+								<select class="custom-select" id="inputGroupSelect01" name="category_id">
+									<option value='<?php echo $product->category_id ?>' selected>Choose...</option>
+									<?php $queryCat = $this->db->query('SELECT * FROM categories');?>
+									<?php foreach ($queryCat->result() as $row) { ?>
+										<?php if($row->category_id != 12){ ?>
+										<option value="<?php echo $row->category_id; ?>"><?php echo $row->category; ?></option>
+										<?php } ?>
+									<?php } ?>
+								</select>	
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="address" placeholder="Price">
+								<label for="harga">Harga</label>
+								<input value="<?php echo $product->harga; ?>" class="input form-control <?php echo form_error('harga') ? 'is-invalid':'' ?>" type="number" name="harga" placeholder="Price">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="city" placeholder="Description">
+								<label for="description">Description</label>
+								<input value="<?php echo $product->description; ?>" class="input" type="text" name="description" placeholder="Description">
 							</div>
 							
-							<a href="#" class="primary-btn order-submit">Add</a>
+							<input type="submit" class="primary-btn order-submit" value="UPDATE" name="btn">
 							
 							
 						</div>
+						</form>
 						<!-- /Billing Details -->
 
 					</div>
@@ -98,19 +121,17 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
-
-		<!-- jQuery Plugins -->
 		<script>
 			var element = document.getElementById("listUpdate");
 			element.classList.add("active");
 		</script>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/slick.min.js"></script>
-		<script src="js/nouislider.min.js"></script>
-		<script src="js/jquery.zoom.min.js"></script>
-		<script src="js/main.js"></script>
+		<!-- jQuery Plugins -->
+		<script src="<?php echo base_url('js/jquery.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/bootstrap.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/slick.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/nouislider.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/jquery.zoom.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/main.js') ?>"></script>
 
 	</body>
 </html>
-	
