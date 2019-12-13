@@ -79,15 +79,6 @@
 								<input class="input" type="text" name="address" placeholder="Address">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="city" placeholder="City">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="country" placeholder="Country">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="zip-code" placeholder="ZIP Code">
-							</div>
-							<div class="form-group">
 								<input class="input" type="tel" name="tel" placeholder="Telephone">
 							</div>
 							
@@ -132,7 +123,7 @@
 								<div><strong class="order-total">$2940.00</strong></div>
 							</div>
 						</div>
-						<a href="#" class="primary-btn order-submit">Place order</a>
+						<a href="<?php echo base_url('index.php/welcome/transaction') ?>" class="primary-btn order-submit">Place order</a>
 					</div>
 					<!-- /Order Details -->
 				</div>

@@ -31,4 +31,19 @@ class Welcome extends CI_Controller {
 	public function contact(){
 		$this->load->view('contact.php');
 	}
+
+	public function store(){
+		$this->load->view('easybucket_test/nav2');
+		$this->load->view('easybucket_test/store');
+	}
+
+	public function transaction(){
+		$this->load->view('easybucket_test/nav2');
+		$this->load->view('easybucket_test/transaction');
+	}
+
+	public function checkout(){
+		$this->load->view('easybucket_test/nav2');
+		$this->load->view('easybucket_test/checkout');
+	}
 }

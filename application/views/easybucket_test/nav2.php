@@ -48,8 +48,8 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-							<a href="#" class="logo">
-                            	<img src="<?php echo base_url('assets/easybucket_logo2.png') ?>" alt="">
+							<a href="<?php echo base_url() ?>" class="logo">
+                            	<img src="<?php echo base_url('/assets/easybucket_logo2.png') ?>" alt="">
                         	</a>
 							</div>
 						</div>
@@ -59,12 +59,18 @@
 						<div class="col-md-6">
 							<div class="header-search">
 								<form>
-									<select class="input-select">
+									<select class="input-select" width="100px">
 										<option value="0">All Categories</option>
-										<option value="1">Category 01</option>
-										<option value="1">Category 02</option>
+										<?php   
+											$queryCat = $this->db->query('SELECT * FROM categories');
+										?>
+										<?php foreach ($queryCat->result() as $row) { ?>
+											<?php if($row->category_id != 12){ ?>
+											<option value="<?php echo $row->category_id; ?>"><?php echo $row->category;?></option>
+											<?php } ?>
+										<?php } ?>
 									</select>
-									<input class="input" placeholder="Search here">
+									<input class="input" placeholder="Search here" style="width:200px">
 									<button class="search-btn">Search</button>
 								</form>
 							</div>
@@ -112,7 +118,7 @@
 										</div>
 										<div class="cart-btns">
 											<a href="#">View Cart</a>
-											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+											<a href="<?php echo base_url('index.php/welcome/checkout') ?>">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -188,10 +194,10 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
+						<li class="active"><a href="<?php echo base_url() ?>">Home</a></li>
 						<!-- <li><a href="#">Hot Deals</a></li> -->
-						<li><a href="#">Categories</a></li>
-						<li><a href="#">Transaction</a></li>
+						<li><a href="<?php echo base_url('index.php/welcome/store') ?>">Categories</a></li>
+						<li><a href="<?php echo base_url('index.php/welcome/transaction') ?>">Transaction</a></li>
 						<!-- <li><a href="#">Smartphones</a></li> -->
 						<!-- <li><a href="#">Cameras</a></li> -->
 						<!-- <li><a href="#">Accessories</a></li> -->
