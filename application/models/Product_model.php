@@ -22,10 +22,6 @@ class Product_model extends CI_Model
             'label' => 'Harga',
             'rules' => 'numeric'],
 
-            ['field' => 'category_id',
-            'label' => 'Category',
-            'rules' => 'required'],
-
             ['field' => 'description',
             'label' => 'Description',
             'rules' => 'required']
@@ -47,6 +43,7 @@ class Product_model extends CI_Model
         $post = $this->input->post();
         $this->nama = $post["nama"];
         $this->harga = $post["harga"];
+        // $this->image = $this->_uploadImage();
         $this->description = $post["description"];
         $this->category_id = $post["category_id"];
         $this->db->insert($this->_table, $this);
@@ -59,7 +56,7 @@ class Product_model extends CI_Model
         $this->nama = $post["nama"];
         $this->harga = $post["harga"];
         $this->description = $post["description"];
-        $this->category_id = $post["categoryPid"];
+        $this->category_id = $post["category_id"];
         $this->db->update($this->_table, $this, array('product_id' => $post['id']));
     }
 

@@ -8,7 +8,7 @@ class Products extends CI_Controller
     {
         parent::__construct();
         $this->load->model("product_model");
-        $this->load->library('form_validation');
+        $this->load->library("form_validation");
     }
 
     public function index()
@@ -23,7 +23,7 @@ class Products extends CI_Controller
         $product = $this->product_model;
         $validation = $this->form_validation;
         $validation->set_rules($product->rules());
-
+        echo $validation->run();
         if ($validation->run()) {
             $product->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
@@ -41,14 +41,15 @@ class Products extends CI_Controller
         $validation = $this->form_validation;
         $validation->set_rules($product->rules());
 
-        if ($validation->run()) {
+        if ($validation->run()){
             $product->update();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
         $data["product"] = $product->getById($id);
         if (!$data["product"]) show_404();
-        
+
+        $this->load->view("easybucket_test/navAdmin");
         $this->load->view("admin/product/adminUpdate", $data);
     }
 
@@ -57,7 +58,25 @@ class Products extends CI_Controller
         if (!isset($id)) show_404();
         
         if ($this->product_model->delete($id)) {
-            redirect(site_url('admin/product/adminDelete'));
+            redirect(site_url('admin/product/'));
         }
+    }
+
+    private function _uploadImage(){
+        $config['upload_path']          = './upload/product/';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['file_name']            = $this->product_id;
+        $config['overwrite']			= true;
+        $config['max_size']             = 10024; // 1MB
+        // $config['max_width']            = 1024;
+        // $config['max_height']           = 768;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('image')) {
+            return $this->upload->data("file_name");
+        }
+        
+            return "default.jpg";
     }
 }

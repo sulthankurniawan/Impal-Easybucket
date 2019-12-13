@@ -54,7 +54,7 @@
         <!-- /BREADCRUMB -->
 		
 		<!-- Order Details -->
-		<div class="col-md-5 order-details">
+		<div class="col-md-5 order-details" style="margin-left:60px;">
             <div class="section-title text-center">
                 <h3 class="title">Customer Order</h3>
             </div>
@@ -89,7 +89,7 @@
 		<!-- /Order Details -->
 
 		<!-- Order Details -->
-		<div class="col-md-5 order-details">
+		<div class="col-md-5 order-details" style="margin-left:60px;">
             <div class="section-title text-center">
                 <h3 class="title">Customer Order</h3>
             </div>
@@ -124,7 +124,7 @@
 		<!-- /Order Details -->
 
 		<!-- Order Details -->
-		<div class="col-md-5 order-details">
+		<div class="col-md-5 order-details" style="margin-left:60px;">
             <div class="section-title text-center">
                 <h3 class="title">Customer Order</h3>
             </div>
@@ -158,9 +158,9 @@
         	</div>
 		<!-- /Order Details -->
 		<!-- Order Details -->
-		<div class="col-md-5 order-details">
+		<div class="col-md-5 order-details" style="margin-left:60px;">
             <div class="section-title text-center">
-                <h3 class="title">Customer Order</h3>
+                <h3 class="title">#1</h3>
             </div>
             <div class="order-summary">
                 <div>Nama:</div>
@@ -196,12 +196,12 @@
 				element.classList.add("active");
 		</script>
 	<!-- jQuery Plugins -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/slick.min.js"></script>
-		<script src="js/nouislider.min.js"></script>
-		<script src="js/jquery.zoom.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="<?php echo base_url('js/jquery.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/bootstrap.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/slick.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/nouislider.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/jquery.zoom.min.js') ?>"></script>
+		<script src="<?php echo base_url('js/main.js') ?>"></script>
 
 	</body>
 </html>
