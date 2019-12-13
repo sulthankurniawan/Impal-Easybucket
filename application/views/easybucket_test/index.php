@@ -47,10 +47,10 @@
 					<div class="col-md-4 col-xs-6">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="./img/shop01.png" alt="">
+								<img src="./assets/items/Apel.jpg" alt="">
 							</div>
 							<div class="shop-body">
-								<h3>Laptop<br>Collection</h3>
+								<h3>Fruit<br>Collection</h3>
 								<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
@@ -61,10 +61,10 @@
 					<div class="col-md-4 col-xs-6">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="./img/shop03.png" alt="">
+								<img src="./assets/items/butter.png" alt="">
 							</div>
 							<div class="shop-body">
-								<h3>Accessories<br>Collection</h3>
+								<h3>Dairy<br>Collection</h3>
 								<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
@@ -75,10 +75,10 @@
 					<div class="col-md-4 col-xs-6">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="./img/shop02.png" alt="">
+								<img src="./assets/items/eggs.png" alt="">
 							</div>
 							<div class="shop-body">
-								<h3>Cameras<br>Collection</h3>
+								<h3>Eggs<br>Collection</h3>
 								<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
@@ -124,7 +124,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product01.png" alt="">
+												<img src="./assets/items/rice.png" alt="">
 												<div class="product-label">
 													<!-- <span class="sale">-30%</span>
 													<span class="new">NEW</span> -->
@@ -132,8 +132,8 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#">product name goes here</a></h3>
-												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+												<h3 class="product-name"><a href="#">Rice</a></h3>
+												<h4 class="product-price">$30.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 													<!-- <i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
@@ -152,15 +152,15 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product02.png" alt="">
+												<img src="./assets/items/honey.png" alt="">
 												<div class="product-label">
 													<!-- <span class="new">NEW</span> -->
 												</div>
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#">product name goes here</a></h3>
-												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+												<h3 class="product-name"><a href="#">pHoney</a></h3>
+												<h4 class="product-price">$20.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 													<!-- <i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
@@ -179,14 +179,14 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product03.png" alt="">
+												<img src="./assets/items/sunflowerseed.png" alt="">
 												<div class="product-label">
 													<!-- <span class="sale">-30%</span> -->
 												</div>
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#">product name goes here</a></h3>
+												<h3 class="product-name"><a href="#">Sunflower seed</a></h3>
 												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 												</div>
@@ -201,12 +201,12 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product04.png" alt="">
+												<img src="./assets/items/tea.png" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#">product name goes here</a></h3>
-												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+												<h3 class="product-name"><a href="#">tea</a></h3>
+												<h4 class="product-price">$70.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 													<!-- <i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
@@ -225,12 +225,12 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product05.png" alt="">
+												<img src="./assets/items/Anggur.jpg" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#">product name goes here</a></h3>
-												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+												<h3 class="product-name"><a href="#">Grape</a></h3>
+												<h4 class="product-price">$50.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 													<!-- <i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
@@ -260,12 +260,14 @@
 		</div>
 		<!-- /SECTION -->
 
+		<img src="/assets/bar.png" alt="">
+
 		<!-- HOT DEAL SECTION -->
-		<div id="hot-deal" class="section">
+		<!-- <div id="hot-deal" class="section"> -->
 			<!-- container -->
-			<div class="container">
+			<!-- <div class="container"> -->
 				<!-- row -->
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-md-12">
 						<div class="hot-deal">
 							<ul class="hot-deal-countdown">
@@ -299,11 +301,11 @@
 							<a class="primary-btn cta-btn" href="#">Shop now</a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<!-- /row -->
-			</div>
+			<!-- </div> -->
 			<!-- /container -->
-		</div>
+		<!-- </div> -->
 		<!-- /HOT DEAL SECTION -->
 
 		<!-- jQuery Plugins -->
