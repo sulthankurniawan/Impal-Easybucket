@@ -49,7 +49,7 @@
 						<div class="col-md-3">
 							<div class="header-logo">
 							<a href="#" class="logo">
-                            	<img src="./assets/easybucket_logo2.png" alt="">
+                            	<img src="<?php echo base_url('assets/easybucket_logo2.png') ?>" alt="">
                         	</a>
 							</div>
 						</div>
