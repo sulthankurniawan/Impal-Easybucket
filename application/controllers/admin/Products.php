@@ -29,6 +29,7 @@ class Products extends CI_Controller
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
+        $this->load->view("easybucket_test/navAdmin");
         $this->load->view("admin/product/adminAdd");
     }
 

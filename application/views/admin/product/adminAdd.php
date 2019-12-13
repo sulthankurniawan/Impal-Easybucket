@@ -59,9 +59,14 @@
 			<div class="container">
 				<!-- row -->
 				<div class="row">
-
+				<?php if ($this->session->flashdata('success')): ?>
+				<div class="alert alert-success" role="alert">
+					<?php echo $this->session->flashdata('success'); ?>
+				</div>
+				<?php endif; ?>
 					<div class="col-md-7">
 						<!-- Billing Details -->
+						<form action="<?php echo site_url('admin/products/add') ?>" method="post" enctype="multipart/form-data">
 						<div class="billing-details">
 							<div class="section-title">
 								<h3 class="title">Item Profile</h3>
@@ -74,22 +79,37 @@
 							</div>
 							<br>
 							<div class="form-group">
-								<input class="input" type="text" name="first-name" placeholder="Name">
+								<label for="nama">Nama</label>
+								<input class="input form-control <?php echo form_error('nama') ? 'is-invalid':'' ?>" type="text" name="nama" placeholder="Name">
 							</div>
 							<div class="form-group">
-								<input class="input" type="email" name="email" placeholder="Category">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="categories">Categories</label>
+								</div>
+								<select class="custom-select" id="inputGroupSelect01" name="category_id">
+									<option value='12' selected>Choose...</option>
+									<?php $queryCat = $this->db->query('SELECT * FROM categories');?>
+									<?php foreach ($queryCat->result() as $row) { ?>
+										<?php if($row->category_id != 12){ ?>
+										<option value="<?php echo $row->category_id; ?>"><?php echo $row->category; ?></option>
+										<?php } ?>
+									<?php } ?>
+								</select>	
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="address" placeholder="Price">
+								<label for="harga">Harga</label>
+								<input class="input form-control <?php echo form_error('harga') ? 'is-invalid':'' ?>" type="number" name="harga" placeholder="Price">
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="city" placeholder="Description">
+								<label for="description">Description</label>
+								<input class="input" type="text" name="description" placeholder="Description">
 							</div>
 							
-							<a href="#" class="primary-btn order-submit">Add</a>
+							<input type="submit" href="#" class="primary-btn order-submit" value="ADD">
 							
 							
 						</div>
+						</form>
 						<!-- /Billing Details -->
 
 					</div>

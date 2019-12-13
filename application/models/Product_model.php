@@ -6,7 +6,7 @@ class Product_model extends CI_Model
 
     public $product_id;
     public $nama;
-    public $price;
+    public $harga;
     public $category_id;
     public $image = "default.jpg";
     public $description;
@@ -18,11 +18,11 @@ class Product_model extends CI_Model
             'label' => 'Nama',
             'rules' => 'required'],
 
-            ['field' => 'price',
-            'label' => 'Price',
+            ['field' => 'harga',
+            'label' => 'Harga',
             'rules' => 'numeric'],
 
-            ['field' => 'category',
+            ['field' => 'category_id',
             'label' => 'Category',
             'rules' => 'required'],
 
@@ -46,7 +46,7 @@ class Product_model extends CI_Model
     {
         $post = $this->input->post();
         $this->nama = $post["nama"];
-        $this->price = $post["price"];
+        $this->harga = $post["harga"];
         $this->description = $post["description"];
         $this->category_id = $post["category_id"];
         $this->db->insert($this->_table, $this);
@@ -57,7 +57,7 @@ class Product_model extends CI_Model
         $post = $this->input->post();
         $this->product_id = $post["id"];
         $this->nama = $post["nama"];
-        $this->price = $post["price"];
+        $this->harga = $post["harga"];
         $this->description = $post["description"];
         $this->category_id = $post["categoryPid"];
         $this->db->update($this->_table, $this, array('product_id' => $post['id']));

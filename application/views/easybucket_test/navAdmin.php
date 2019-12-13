@@ -73,7 +73,7 @@
                     <li><br></li>
                     <li id="listAdd" class=""><a href="#">Add Item</a></li>
                     <li id="listUpdate" class=""><a href="#">Update Item</a></li>
-                    <li id="listDelete" class=""><a href="#">Delete Item</a></li>
+                    <li id="listDelete" class=""><a href="#">List Item</a></li>
                     <!-- <li><a href="#">Cameras</a></li> -->
                     <!-- <li><a href="#">Accessories</a></li> -->
                 </ul>
