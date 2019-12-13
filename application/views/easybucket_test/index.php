@@ -241,7 +241,7 @@
 		</div>
 		<!-- /SECTION -->
 
-		<img src="/assets/bar.png" alt="">
+		<img src="<?php echo base_url('assets/bar.png') ?>" alt="" width="100%">
 
 		<!-- HOT DEAL SECTION -->
 		<!-- <div id="hot-deal" class="section"> -->
